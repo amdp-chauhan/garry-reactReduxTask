@@ -13,5 +13,6 @@
     "API_URL":"http://localhost:8000",
     "API_PORT":"8000",
     "PORT":"3000",
+    "IMGIX_BASE_URL":"https://digztr-temp.imgix.net"
   }
 }

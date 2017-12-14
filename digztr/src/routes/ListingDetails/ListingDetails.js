@@ -171,7 +171,7 @@ class ListingDetails extends Component {
     return (
       this.props.listing.headerImages.map((item,index) => {
         return (
-          <img key={index} className="img-item" src={item.image} alt="" />
+          <img key={index} className="img-item" src={`${item.image}?auto=enhance&w=1740&h=978&fit=crop&fm=jpeg`} alt="" />
         )
       })
     );
