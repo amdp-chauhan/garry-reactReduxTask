@@ -1,0 +1,132 @@
+.violet-01-bg{
+  background-color: #949ec2;
+  color: white;
+}
+.violet-02-bg{
+  background-color: #6777aa;
+  color: white;
+}
+.violet-03-bg{
+  background-color: #273d86;
+  color: white;
+}
+
+.blue-01-bg{
+  background-color: #a7d3fa;
+  color: white;
+}
+.blue-02-bg{
+  background-color: #85c2f8;
+  color: white;
+}
+.blue-03-bg{
+  background-color: #4fa8f5;
+  color: white;
+}
+
+.orange-01-bg{
+  background-color: #ffbc91;
+  color: white;
+}
+.orange-02-bg{
+  background-color: #ffa365;
+  color: white;
+}
+.orange-03-bg{
+  background-color: #ff7f25;
+  color: white;
+}
+
+.yellow-01-bg{
+  background-color: #ffd6b0;
+  color: white;
+}
+.yellow-02-bg{
+  background-color: #ffbd80;
+  color: white;
+}
+.yellow-03-bg{
+  background-color: #ffae60;
+  color: white;
+}
+.white-bg{
+  background-color: #fff;
+}
+.violet-text{
+  color: #273d86;
+}
+
+.blue-text{
+  color: #4fa8f5;
+}
+
+.orange-text{
+  color: #ff7f25;
+}
+
+.yellow-text{
+  color: #ffae60;
+}
+*{
+  color: #515151;
+  font-family: 'Roboto', sans-serif !important;
+}
+body{
+  overflow-x: hidden;
+  padding:0!important;
+  margin:0!important;
+}
+.navbar-default{
+  background-color: white !important;
+  box-shadow: 0px 0px 10px #515151;
+}
+
+@media (min-width: 768px){
+ .navbar{
+   border-radius: 0px !important;
+  }
+}
+
+.form-control, .btn{
+  border-radius: 0px !important;
+}
+
+.container{
+  padding-right: 30px !important;
+  padding-left: 30px !important;
+}
+
+h5{
+  margin: 0px;
+    font-size: 20px;
+    font-weight: lighter;
+}
+h3{
+  margin: 0px;
+    font-size: 30px;
+    font-weight: lighter;
+}
+h5 span,h3 span{
+  font-size: 18px !important;
+}
+
+.btn-overwrite{
+  border: 2px solid #ffae60;
+  background: #fc4a1a;
+  background: -webkit-linear-gradient(to right, #ff9d00, #ff7c19);
+  background: linear-gradient(to right, #ff9d00, #ff7c19);
+
+  color: #fff7d6;
+}
+
+.nav-m{
+  width: 100%;
+  z-index: 10;
+  position:fixed;
+  background:white;
+  margin-top: 60px;
+  border-bottom: 1px solid gray;
+}
+.nav-m li{
+  padding: 0 10px;
+}

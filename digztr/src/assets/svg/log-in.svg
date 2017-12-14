@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="23px" height="24px" viewBox="0 0 23 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 47.1 (45422) - http://www.bohemiancoding.com/sketch -->
+    <title>log-in</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <polygon id="path-1" points="0.00367021277 23.9383033 23 23.9383033 23 0.00246786632 0.00367021277 0.00246786632"></polygon>
+    </defs>
+    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="header" transform="translate(-1076.000000, -23.000000)">
+            <g id="Group-20">
+                <g transform="translate(1076.000000, 23.000000)">
+                    <g id="log-in">
+                        <mask id="mask-2" fill="white">
+                            <use xlink:href="#path-1"></use>
+                        </mask>
+                        <g id="Clip-2"></g>
+                        <polygon id="Fill-1" fill="#F57F1D" mask="url(#mask-2)" points="11.1033723 14.4071568 12.1413085 15.4540257 15.596508 11.9691517 12.1413085 8.48427763 11.1033723 9.53114653 12.7864707 11.2287918 0 11.2287918 0 12.7095116 12.7864707 12.7095116"></polygon>
+                        <polygon id="Fill-3" fill="#F57F1D" mask="url(#mask-2)" points="6.11702128 0 6.11702128 8.51413882 7.58510638 8.51413882 7.58510638 1.48071979 21.5319149 1.48071979 21.5319149 22.4575835 7.58510638 22.4575835 7.58510638 15.4241645 6.11702128 15.4241645 6.11702128 23.9383033 23 23.9383033 23 0"></polygon>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

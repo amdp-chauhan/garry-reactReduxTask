@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="22px" height="16px" viewBox="0 0 22 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 47.1 (45422) - http://www.bohemiancoding.com/sketch -->
+    <title>envelope</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Listing-site" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="property-listing" transform="translate(-193.000000, -1041.000000)" fill="#FF740A">
+            <g id="Property-description" transform="translate(42.000000, 831.000000)">
+                <g id="Group-54" transform="translate(1.000000, 193.000000)">
+                    <g id="Group-53" transform="translate(150.000000, 16.000000)">
+                        <g id="envelope" transform="translate(0.000000, 1.000000)">
+                            <polygon id="Fill-1" points="22 15.2801058 22 0.78947438 14.4769167 8.19551736"></polygon>
+                            <polygon id="Fill-2" points="0 0.787676033 0 15.2801058 7.52308333 8.19551736"></polygon>
+                            <path d="M0.508291667,0.269752066 L8.20875,7.85113388 C8.25366667,7.87046612 8.38245833,8.00039669 8.3985,8.03726281 L10.5774167,10.1835901 C10.81025,10.395795 11.18975,10.395795 11.433125,10.1745983 L13.5996667,8.03906116 C13.6175417,8.00219504 13.7463333,7.87046612 13.79125,7.85113388 L21.4917083,0.269752066 L0.508291667,0.269752066 Z" id="Fill-3"></path>
+                            <path d="M13.9594583,8.70489917 L11.941875,10.6911736 C11.675125,10.9352992 11.3345833,11.0580364 10.9963333,11.0580364 C10.66175,11.0580364 10.3285417,10.9384463 10.0672917,10.6997157 L8.04054167,8.70489917 L0.57475,15.734638 L21.42525,15.734638 L13.9594583,8.70489917 Z" id="Fill-4"></path>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

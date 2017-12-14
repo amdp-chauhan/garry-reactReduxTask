@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="22px" height="20px" viewBox="0 0 22 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 47.1 (45422) - http://www.bohemiancoding.com/sketch -->
+    <title>printer-</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <polygon id="path-1" points="0.331666667 6.56666667 11.0033333 6.56666667 11.0033333 0 0.331666667 0 0.331666667 6.56666667"></polygon>
+    </defs>
+    <g id="Listing-site" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="property-listing" transform="translate(-324.000000, -1039.000000)">
+            <g id="Property-description" transform="translate(42.000000, 831.000000)">
+                <g id="Group-54" transform="translate(1.000000, 193.000000)">
+                    <g id="Group-51" transform="translate(281.000000, 15.000000)">
+                        <g id="printer-">
+                            <g id="Group-3" transform="translate(4.924242, 13.000000)">
+                                <mask id="mask-2" fill="white">
+                                    <use xlink:href="#path-1"></use>
+                                </mask>
+                                <g id="Clip-2"></g>
+                                <path d="M0.331666667,2.67 L0.331666667,6.66666667 L11.0033333,6.66666667 L11.0033333,0 L0.331666667,0 L0.331666667,2.67 Z M1.66666667,2.67 L9.66833333,2.67 L9.66833333,1.335 L1.66666667,1.335 L1.66666667,2.67 Z M1.66666667,5.33166667 L9.66833333,5.33166667 L9.66833333,3.99666667 L1.66666667,3.99666667 L1.66666667,5.33166667 Z" id="Fill-1" fill="#FF740A" mask="url(#mask-2)"></path>
+                            </g>
+                            <polygon id="Fill-4" fill="#FF740A" points="16.5807576 3.99666667 16.5807576 0 5.90909091 0 5.90909091 6.66666667 16.5807576 6.66666667"></polygon>
+                            <path d="M18.665,4 L17.33,4 L17.33,8.005 L3.99666667,8.005 L3.99666667,4 L2.67,4 C1.335,4 0,5.335 0,6.67 L0,13.3366667 C0,14.6716667 1.335,16.0066667 2.67,16.0066667 L3.99666667,16.0066667 L3.99666667,12.0016667 L17.33,12.0016667 L17.33,16.0066667 L18.665,16.0066667 C20,16.0066667 21.335,14.6716667 21.335,13.3366667 L21.335,6.67 C21.335,5.335 20,4 18.665,4 Z" id="Fill-5" fill="#FF740A"></path>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

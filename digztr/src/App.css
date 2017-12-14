@@ -1,0 +1,21 @@
+#footer{
+  background-color: #273d86;
+    padding: 30px;
+
+}
+#footer .footer-link a{
+  color: white;
+  margin: 10px 20px;
+}
+#footer .copyright-text{
+  padding: 20px;
+}
+#footer span{
+  color: white;
+}
+#footer .social img{
+  width: 20px;
+}
+#footer .social a{
+  margin-right: 20px;
+}

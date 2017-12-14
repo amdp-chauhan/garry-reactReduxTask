@@ -1,0 +1,17 @@
+{
+  "name": "server",
+  "script": "index.js",
+  "env": {
+    "NODE_ENV": "production",
+    "JWT_SECRET": "secret",
+    "DB_USERNAME":"mergepoint",
+    "DB_PASSWORD":"dbpassword",
+    "DB_URL":"ds119306.mlab.com:19306/digztr",
+    "STREAM_APP_ID":"",
+    "STREAM_KEY":"",
+    "STREAM_SECRET":"",
+    "API_URL":"http://localhost:8000",
+    "API_PORT":"8000",
+    "PORT":"3000",
+  }
+}
