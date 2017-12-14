@@ -1,10 +1,11 @@
 import React, { Component } from 'react';
+import config from '../../../config';
 
 class Feature extends Component {
   render(){
     return (
       <div className="col-sm-6 col-md-3 text-center house-feature">
-        <img className="row " src={require(`../../../assets/svg/${this.props.feature.img.file}`)} alt="" width={this.props.feature.img.width} />
+        <img className="row " src={`${config.imgix.baseUrl}/svg/${this.props.feature.img}`} alt="" height="90" />
         <span className="row">{this.props.feature.name}: {this.props.feature.value}</span>
         <img src={require("../../../assets/svg/fire.svg")} alt="" width="30px" />
         <b className="orange-text">Hottest Size</b>
