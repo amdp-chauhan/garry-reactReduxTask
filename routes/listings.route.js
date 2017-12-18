@@ -7,4 +7,7 @@ var router = Router()
 router.route('/')
   .get(listingCtrl.list);
 
+router.route('/:id/features')
+  .put(listingCtrl.update_features);
+
 module.exports = router;

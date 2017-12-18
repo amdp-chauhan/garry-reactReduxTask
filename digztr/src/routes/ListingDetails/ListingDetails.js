@@ -146,6 +146,7 @@ class DetailBody extends Component {
         </div>
         <DetailDescription />
         <HighlightFeatures
+          _id={this.props.listing._id}
           features={this.props.listing.features}
           />
         <Facts
