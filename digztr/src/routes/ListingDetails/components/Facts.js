@@ -7,7 +7,7 @@ class Fact extends Component {
       <div className="col-xs-12 col-sm-6 col-md-4 fact">
         <div className="row">
           <div className="col-xs-3 text-right" style={{padding:"0px !important"}}>
-            <img src={`${config.imgix.baseUrl}/svg/${this.props.fact.img}`} alt="" />
+            <img src={this.props.fact.icon.url} alt="" />
           </div>
           <div className="col-xs-9 text-left fact-class">
             <h5>{this.props.fact.type}</h5>

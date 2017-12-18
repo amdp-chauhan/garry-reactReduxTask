@@ -9,4 +9,18 @@ function list(req, res, next) {
     .catch(e => next(e));
 }
 
-module.exports = {list};
+/**
+ * Update Listing by id
+ */
+function update_features(req, res, next) {
+  Listing.show(req.params.id)
+    .then(listing => {
+      listing.set({features: req.body});
+      listing.save()
+        .then(updatedListing => res.json(updatedListing))
+        .catch(e => next(e));
+    })
+    .catch(e => next(e));
+}
+
+module.exports = {list,update_features};
