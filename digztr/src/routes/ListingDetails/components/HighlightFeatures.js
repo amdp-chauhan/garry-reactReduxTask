@@ -66,38 +66,56 @@ class HighlightFeatures extends Component {
         this.setState({submitState:"Error! Please click to try again"});
       })
   }
-  handleSubmit(e) {
-    e.preventDefault();
-    if (this.state.disabledSubmitState) {
-      this.setState({disabledSubmitState:false});
-      this.setState({submitState:"Save New Feature"});
-    }else{
-      let data = [];
-
-      this.props.features.map(item => {
-        data.push({
-          name: item.name,
-          value: item.value,
-          icon: item.icon._id
-        });
-      });
-
+  handleSubmit(item) {
+    this.setState({selectedIcon: item});
+    let data = [];
+    console.log(item);
+    this.props.features.map(item => {
       data.push({
-        name: this.state.name,
-        value: this.state.value,
-        icon: this.state.selectedIcon._id
+        name: item.name,
+        value: item.value,
+        icon: item.icon._id
       });
+    });
 
-      // data = JSON.stringify(data);
+    data.push({
+      name: item.name,
+      value: item.value,
+      icon: item._id
+    });
 
-      this.handleApiRequest(data);
-
-      this.setState({disabledSubmitState:true});
-      this.setState({submitState:"Saving!!"});
-
-
-
-    }
+    this.handleApiRequest(data);
+    // e.preventDefault();
+    // if (this.state.disabledSubmitState) {
+    //   this.setState({disabledSubmitState:false});
+    //   this.setState({submitState:"Save New Feature"});
+    // }else{
+    //   let data = [];
+    //
+    //   this.props.features.map(item => {
+    //     data.push({
+    //       name: item.name,
+    //       value: item.value,
+    //       icon: item.icon._id
+    //     });
+    //   });
+    //
+    //   data.push({
+    //     name: this.state.name,
+    //     value: this.state.value,
+    //     icon: this.state.selectedIcon._id
+    //   });
+    //
+    //   // data = JSON.stringify(data);
+    //
+    //   this.handleApiRequest(data);
+    //
+    //   this.setState({disabledSubmitState:true});
+    //   this.setState({submitState:"Saving!!"});
+    //
+    //
+    //
+    // }
   }
   handleDelete(feature){
     let data = [];
@@ -131,7 +149,7 @@ class HighlightFeatures extends Component {
   renderModal(){
     return (
       <Icons
-        handleSelect={(icon) => this.handleIconChange(icon)}
+        handleSelect={(icon) => this.handleSubmit(icon)}
       />
     )
   }
@@ -176,17 +194,14 @@ class HighlightFeatures extends Component {
         </div>
         <br />
         <div className="row text-center" style={{margin: "0 20px"}}>
-          <form
-            className="form-inline"
-            onSubmit={e => this.handleSubmit(e)}
+          <button
+            type="button"
+            class="btn btn-overwrite btn-block"
+            data-toggle="modal"
+            data-target="#iconModal"
             >
-            {this.renderInputForms()}
-            <input
-              type="submit"
-              class="btn btn-overwrite btn-block"
-              value={this.state.submitState}
-              />
-          </form>
+            {this.state.submitState}
+          </button>
         </div>
         <br />
         <div className="row text-center feature-text">
