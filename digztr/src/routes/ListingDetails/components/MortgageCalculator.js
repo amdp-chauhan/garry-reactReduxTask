@@ -38,9 +38,9 @@ class MortgageChart extends Component {
         <br />
 
         <ul>
-          <li style={{color: "#ff3700"}}><b style={{color: "#ff3700"}}> Principle Interest: ${this.props.interest}</b></li>
-          <li style={{color: "#273d86"}}><b style={{color: "#273d86"}}> Insurance: ${this.props.insurance}</b></li>
-          <li style={{color: "#a7d3fa"}}><b style={{color: "#a7d3fa"}}> Tax: ${this.props.tax}</b></li>
+          <li style={{color: "#ff3700"}}><b style={{color: "#ff3700"}}> Principle Interest: ${this.props.interest.toFixed(2)}</b></li>
+          <li style={{color: "#273d86"}}><b style={{color: "#273d86"}}> Insurance: ${this.props.insurance.toFixed(2)}</b></li>
+          <li style={{color: "#a7d3fa"}}><b style={{color: "#a7d3fa"}}> Tax: ${this.props.tax.toFixed(2)}</b></li>
           <li style={{color: "#ffd6b0"}}><b style={{color: "#ffd6b0"}}> PMI: $225</b></li>
         </ul>
       </div>
@@ -102,7 +102,7 @@ class MortgageSliders extends Component {
     }));
   }
   componentDidMount() {
-    new Slider("#a",{});
+    new Slider("#a",{}).disable();
     new Slider("#b",{}).on("change", (value) => {
       this.handleDownpaymentSlider(value.newValue);
     });
@@ -123,8 +123,8 @@ class MortgageSliders extends Component {
     return (
       <div class="col-xs-12  col-sm-6">
         <p> <b>Loan Amount</b></p>
-        <input type="text" value="" data-slider-min="0" data-slider-max="255" data-slider-step="1" data-slider-value="128" data-slider-id="a-C" id="a" data-slider-tooltip="hide" data-slider-handle="square" />
-        <b>$431,910</b>
+        <input type="text" value="" data-slider-min="1000" data-slider-max="50000000" data-slider-step="1000" data-slider-value={this.props.price} data-slider-id="a-C" id="a" data-slider-tooltip="hide" data-slider-handle="square" />
+        <b>${this.props.price}</b>
           <br /><br />
           <p> <b>Down Payment</b></p>
           <input type="text" data-slider-min="0" data-slider-max="100" data-slider-step="1" data-slider-value={this.props.downpayment} data-slider-id="b-C" id="b" data-slider-tooltip="hide" data-slider-handle="square" />
@@ -166,9 +166,10 @@ class MortgageCalculator extends Component {
             payment={this.props.mortgage.payment}
             interest={this.props.mortgage.payment*(this.props.mortgage.interest_rate/100)}
             insurance={this.props.mortgage.homeowner_insurance}
-            tax={this.props.mortgage.payment*(this.props.mortgage.property_tax/100)}
+            tax={this.props.mortgage.payment*(this.props.mortgage.property_tax/12)}
             />
           <MortgageSliders
+            price={this.props.price}
             {...this.props.mortgage}
             dispatch={this.props.dispatch}
             />
