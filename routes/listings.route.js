@@ -7,6 +7,9 @@ var router = Router()
 router.route('/')
   .get(listingCtrl.list);
 
+router.route('/:id')
+  .get(listingCtrl.show);
+
 router.route('/:id/features')
   .put(listingCtrl.update_features);
 

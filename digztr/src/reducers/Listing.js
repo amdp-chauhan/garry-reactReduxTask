@@ -16,6 +16,8 @@ const initialState = {
   construction: [],
   nearbyHomes: [],
   headerImages: [],
+  agents: [],
+  geo: {lat:13.6236789,lng:123.1918884}
 }
 
 /**
@@ -42,6 +44,35 @@ export default function Listing(state = initialState, action) {
       }
       return initialState;
       break;
+    case ListingActions.LOAD_RETS:
+      if (action.response) {
+        let res = action.response;
+        return {
+          _id: "",
+          name: "Sample SimplyRETS Property",
+          price: res.listPrice,
+          description: res.remarks,
+          meta: [
+            {type:'Area',value:res.property.area},
+            {type:'Stories',value:res.property.stories},
+            {type:'Bathrooms',value:res.property.bathsFull},
+            {type:'Bedrooms',value:res.property.bedrooms}
+          ],
+          features: [],
+          facts: [],
+          interiors: [],
+          construction: [],
+          nearbyHomes: [],
+          headerImages: [],
+          agents: [{
+            "lastName": res.agent.lastName,
+            "contact": "",
+            "firstName": res.agent.firstName,
+            "id": res.agent.id
+          }],
+          geo: res.geo
+        };
+      }
   }
   return state;
 }
