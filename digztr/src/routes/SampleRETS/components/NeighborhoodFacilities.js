@@ -4,6 +4,7 @@ import GoogleMapsLoader from 'google-maps';
 export default class NeighborhoodFacilities extends Component {
   componentDidMount() {
     let geo = this.props.geo;
+    console.log(geo);
     GoogleMapsLoader.KEY = 'AIzaSyB9oxm8mSzbrjp16Nd343Pr467AcGZWDgU';
     GoogleMapsLoader.load(function(google) {
       new google.maps.Map(document.getElementById('map'), {
@@ -13,6 +14,17 @@ export default class NeighborhoodFacilities extends Component {
         zoomControl: false,streetViewControl: false,
       });
     });
+  }
+  componentDidUpdate(prevProps, prevState) {
+    this.render();
+  }
+  renderMap(){
+    return (
+      <div id="map" style={{height: "420px"}}>
+
+      </div>
+
+    )
   }
     render() {
         return (
@@ -105,9 +117,7 @@ export default class NeighborhoodFacilities extends Component {
                 </div>
               </div>
             </div>
-              <div id="map" style={{height: "420px"}}>
-
-              </div>
+              {this.renderMap()}
 
         </div>
         );

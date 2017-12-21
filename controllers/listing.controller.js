@@ -10,6 +10,15 @@ function list(req, res, next) {
 }
 
 /**
+ * Get Listing by ID
+ */
+function show(req, res, next) {
+  Listing.show(req.params.id)
+    .then(listing => res.json(listing))
+    .catch(e => next(e));
+}
+
+/**
  * Update Listing by id
  */
 function update_features(req, res, next) {
@@ -23,4 +32,4 @@ function update_features(req, res, next) {
     .catch(e => next(e));
 }
 
-module.exports = {list,update_features};
+module.exports = {list,show,update_features};
