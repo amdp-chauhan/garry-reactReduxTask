@@ -72,8 +72,12 @@ if (config.env==='production') {
   // Express server up the index.html file if it doesn't recognize the router
   const path = require('path');
 
-  app.get('/', (req,res) => {
-    res.sendFile(path.resolve(__dirname, 'digztr', 'build', 'index.html'));
+  app.get('*', (req,res) => {
+    if (req.url.indexOf('api/')) {
+      // mount all routes on /api path
+      app.use('/api', routes);
+    }
+    res.sendFile(path.resolve(__dirname,'../', 'digztr', 'build', 'index.html'));
   });
 }
 
