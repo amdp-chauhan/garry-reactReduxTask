@@ -1,5 +1,6 @@
 import React,{Component} from 'react';
 import GoogleMapsLoader from 'google-maps';
+import googleMapsClient  from '@google/maps';
 
 export default class NeighborhoodFacilities extends Component {
   state = {
@@ -8,6 +9,7 @@ export default class NeighborhoodFacilities extends Component {
   componentDidMount() {
     let geo = this.props.geo;
     let me = this;
+
     GoogleMapsLoader.KEY = 'AIzaSyB9oxm8mSzbrjp16Nd343Pr467AcGZWDgU';
     GoogleMapsLoader.load(function(google) {
       let map = new google.maps.Map(document.getElementById('map'), {
@@ -23,6 +25,25 @@ export default class NeighborhoodFacilities extends Component {
   }
   componentDidUpdate(prevProps, prevState) {
     this.state.gMap.panTo(this.props.geo);
+
+    let request = {
+      location: this.props.geo,
+      radius: 1000,
+      type: 'school'
+    };
+    var googleMapsClient = require('@google/maps').createClient({
+      key: 'AIzaSyB9oxm8mSzbrjp16Nd343Pr467AcGZWDgU'
+    });
+    googleMapsClient.places(request, (result) => {
+      console.log(result);
+    });
+    // googleMapsClient.load(google => {
+    //   let service = new google.maps.places.PlacesService(this.state.gMap);
+    //   service.textSearch(request, (result, status) => {
+    //     console.log(result);
+    //   });
+    // });
+
   }
   render() {
     return (
