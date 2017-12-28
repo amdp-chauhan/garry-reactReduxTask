@@ -70,14 +70,7 @@ export const _loadResponse = (response) => ({
   export function loadRETS() {
     return (dispatch, getState) => {
       dispatch(_loadRETSRequest());
-      axios.get('https://api.simplyrets.com/properties/1005192', {
- 			 	headers: {
- 					Authorization: `Basic ${btoa('simplyrets:simplyrets')}`
- 				}
- 		 	})
-       .then(res => {
-				 console.log(res.data);
-         dispatch(_loadRETSResponse(res.data));
-       });
+      axios.get(`${config.api.baseUrl}/api/listings/rets/33368855`)
+       .then(res => dispatch(_loadRETSResponse(res.data)));
     }
   }
