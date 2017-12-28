@@ -17,7 +17,7 @@ const initialState = {
   nearbyHomes: [],
   headerImages: [],
   agents: [],
-  geo: {lat:13.6236789,lng:123.1918884}
+  geo: {lat:null,lng:null}
 }
 
 /**

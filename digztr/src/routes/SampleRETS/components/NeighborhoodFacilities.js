@@ -1,49 +1,261 @@
 import React,{Component} from 'react';
 import GoogleMapsLoader from 'google-maps';
-import googleMapsClient  from '@google/maps';
+
+GoogleMapsLoader.KEY = 'AIzaSyB9oxm8mSzbrjp16Nd343Pr467AcGZWDgU';
+GoogleMapsLoader.LIBRARIES = ['places'];
+
+var markers = [];
 
 export default class NeighborhoodFacilities extends Component {
-  state = {
-    gMap: null
-  }
   componentDidMount() {
-    let geo = this.props.geo;
-    let me = this;
 
-    GoogleMapsLoader.KEY = 'AIzaSyB9oxm8mSzbrjp16Nd343Pr467AcGZWDgU';
+  }
+  componentDidUpdate(prevProps, prevState) {
+    if (this.props.geo.lat && this.props.geo.lng) {
+      let geo = this.props.geo;
+
+      GoogleMapsLoader.load(function(google) {
+
+        let map = new google.maps.Map(document.getElementById('map'), {
+          center: {lat: geo.lat, lng: geo.lng},
+          zoom: 15,
+          fullscreenControl: false,
+          zoomControl: false,streetViewControl: false,
+        });
+
+        let center = new google.maps.LatLng(geo.lat,geo.lng);
+
+        let request = {
+          location: center,
+          radius: 5000,
+          type: 'school'
+        };
+
+        let service = new google.maps.places.PlacesService(map);
+        service.textSearch(request, (result, status) => {
+          result.forEach(place => {
+            let marker = new google.maps.Marker({
+              position: place.geometry.location,
+              map: map,
+              title: place.name
+            });
+            markers.push(marker);
+          });
+        });
+      });
+    }
+  }
+  renderSchoolMarkers() {
+    this.deleteMarkers();
+    let geo = this.props.geo;
+
     GoogleMapsLoader.load(function(google) {
+
       let map = new google.maps.Map(document.getElementById('map'), {
         center: {lat: geo.lat, lng: geo.lng},
         zoom: 15,
         fullscreenControl: false,
         zoomControl: false,streetViewControl: false,
       });
-      me.setState({gMap: map});
-      map.panTo({lat: geo.lat, lng: geo.lng});
-    });
 
+      let center = new google.maps.LatLng(geo.lat,geo.lng);
+
+      let request = {
+        location: center,
+        radius: 5000,
+        type: 'school'
+      };
+
+      let service = new google.maps.places.PlacesService(map);
+      service.textSearch(request, (result, status) => {
+        result.forEach(place => {
+          let marker = new google.maps.Marker({
+            position: place.geometry.location,
+            map: map,
+            title: place.name
+          });
+          markers.push(marker);
+        });
+      });
+    });
   }
-  componentDidUpdate(prevProps, prevState) {
-    this.state.gMap.panTo(this.props.geo);
+  renderRestaurantMarkers() {
+    this.deleteMarkers();
+    let geo = this.props.geo;
 
-    let request = {
-      location: this.props.geo,
-      radius: 1000,
-      type: 'school'
-    };
-    var googleMapsClient = require('@google/maps').createClient({
-      key: 'AIzaSyB9oxm8mSzbrjp16Nd343Pr467AcGZWDgU'
-    });
-    googleMapsClient.places(request, (result) => {
-      console.log(result);
-    });
-    // googleMapsClient.load(google => {
-    //   let service = new google.maps.places.PlacesService(this.state.gMap);
-    //   service.textSearch(request, (result, status) => {
-    //     console.log(result);
-    //   });
-    // });
+    GoogleMapsLoader.load(function(google) {
 
+      let map = new google.maps.Map(document.getElementById('map'), {
+        center: {lat: geo.lat, lng: geo.lng},
+        zoom: 15,
+        fullscreenControl: false,
+        zoomControl: false,streetViewControl: false,
+      });
+
+      let center = new google.maps.LatLng(geo.lat,geo.lng);
+
+      let request = {
+        location: center,
+        radius: 5000,
+        type: 'restaurant'
+      };
+
+      let service = new google.maps.places.PlacesService(map);
+      service.textSearch(request, (result, status) => {
+        result.forEach(place => {
+          let marker = new google.maps.Marker({
+            position: place.geometry.location,
+            map: map,
+            title: place.name
+          });
+          markers.push(marker);
+        });
+      });
+    });
+  }
+  renderMarketMarkers(){
+    this.deleteMarkers();
+
+    let geo = this.props.geo;
+
+    GoogleMapsLoader.load(function(google) {
+
+      let map = new google.maps.Map(document.getElementById('map'), {
+        center: {lat: geo.lat, lng: geo.lng},
+        zoom: 15,
+        fullscreenControl: false,
+        zoomControl: false,streetViewControl: false,
+      });
+
+      let center = new google.maps.LatLng(geo.lat,geo.lng);
+
+      let request = {
+        location: center,
+        radius: 5000,
+        type: 'grocery_or_supermarket'
+      };
+
+      let service = new google.maps.places.PlacesService(map);
+      service.textSearch(request, (result, status) => {
+        result.forEach(place => {
+          let marker = new google.maps.Marker({
+            position: place.geometry.location,
+            map: map,
+            title: place.name
+          });
+          markers.push(marker);
+        });
+      });
+    });
+  }
+  renderHospitalMarkers() {
+    this.deleteMarkers();
+    let geo = this.props.geo;
+
+    GoogleMapsLoader.load(function(google) {
+
+      let map = new google.maps.Map(document.getElementById('map'), {
+        center: {lat: geo.lat, lng: geo.lng},
+        zoom: 15,
+        fullscreenControl: false,
+        zoomControl: false,streetViewControl: false,
+      });
+
+      let center = new google.maps.LatLng(geo.lat,geo.lng);
+
+      let request = {
+        location: center,
+        radius: 5000,
+        type: 'hospital'
+      };
+
+      let service = new google.maps.places.PlacesService(map);
+      service.textSearch(request, (result, status) => {
+        result.forEach(place => {
+          let marker = new google.maps.Marker({
+            position: place.geometry.location,
+            map: map,
+            title: place.name
+          });
+          markers.push(marker);
+        });
+      });
+    });
+  }
+  renderGasStationMarkers() {
+    this.deleteMarkers();
+    let geo = this.props.geo;
+
+    GoogleMapsLoader.load(function(google) {
+
+      let map = new google.maps.Map(document.getElementById('map'), {
+        center: {lat: geo.lat, lng: geo.lng},
+        zoom: 15,
+        fullscreenControl: false,
+        zoomControl: false,streetViewControl: false,
+      });
+
+      let center = new google.maps.LatLng(geo.lat,geo.lng);
+
+      let request = {
+        location: center,
+        radius: 5000,
+        type: 'gas_station'
+      };
+
+      let service = new google.maps.places.PlacesService(map);
+      service.textSearch(request, (result, status) => {
+        result.forEach(place => {
+          let marker = new google.maps.Marker({
+            position: place.geometry.location,
+            map: map,
+            title: place.name
+          });
+          markers.push(marker);
+        });
+      });
+    });
+  }
+  renderBakeryMarkers() {
+    this.deleteMarkers();
+    let geo = this.props.geo;
+
+    GoogleMapsLoader.load(function(google) {
+
+      let map = new google.maps.Map(document.getElementById('map'), {
+        center: {lat: geo.lat, lng: geo.lng},
+        zoom: 15,
+        fullscreenControl: false,
+        zoomControl: false,streetViewControl: false,
+      });
+
+      let center = new google.maps.LatLng(geo.lat,geo.lng);
+
+      let request = {
+        location: center,
+        radius: 5000,
+        type: 'bakery'
+      };
+
+      let service = new google.maps.places.PlacesService(map);
+      service.textSearch(request, (result, status) => {
+        result.forEach(place => {
+          let marker = new google.maps.Marker({
+            position: place.geometry.location,
+            map: map,
+            title: place.name
+          });
+          markers.push(marker);
+        });
+      });
+    });
+  }
+  deleteMarkers(){
+    //Loop through all the markers and remove
+    for (let i = 0; i < markers.length; i++) {
+      markers[i].setMap(null);
+    }
+    markers = [];
   }
   render() {
     return (
@@ -56,37 +268,32 @@ export default class NeighborhoodFacilities extends Component {
               </div>
               <div className="col-xs-5 no-pad white-bg" style={{height:"420px", overflow:"hidden"}}>
               <div className="row no-margin nf-option">
-                <a href="#1">
+                <a onClick={() => this.renderSchoolMarkers()}>
                   <div className="col-xs-12 nf-item nf-active text-center" style={{height:"70px"}}>
                     <img src={require("../../../assets/svg/graduate-hat.svg")} alt="" />
                   </div>
                 </a>
-                <a href="#2">
+                <a onClick={() => this.renderRestaurantMarkers()}>
                   <div className="col-xs-12 nf-item text-center"style={{height:"70px"}}>
                     <img src={require("../../../assets/svg/hat.svg")} alt="" />
                   </div>
                 </a>
-                <a href="#3">
+                <a onClick={() => this.renderMarketMarkers()}>
                   <div className="col-xs-12 nf-item text-center" style={{height:"70px"}}>
                     <img src={require("../../../assets/svg/empty-shopping-cart.svg")} alt="" />
                   </div>
                 </a>
-                <a href="#4">
+                <a onClick={() => this.renderHospitalMarkers()}>
                   <div className="col-xs-12 nf-item text-center" style={{height:"70px"}}>
                     <img src={require("../../../assets/svg/pills.svg")} alt="" />
                   </div>
                 </a>
-                <a href="#5">
+                <a onClick={() => this.renderGasStationMarkers()}>
                   <div className="col-xs-12 nf-item text-center" style={{height:"70px"}}>
                     <img src={require("../../../assets/svg/gas-station.svg")} alt="" />
                   </div>
                 </a>
-                <a href="#6">
-                  <div className="col-xs-12 nf-item text-center" style={{height:"70px"}}>
-                    <img src={require("../../../assets/svg/hot-chocolate-cup.svg")} alt="" />
-                  </div>
-                </a>
-                <a href="#6">
+                <a onClick={() => this.renderBakeryMarkers()}>
                   <div className="col-xs-12 nf-item text-center" style={{height:"70px"}}>
                     <img src={require("../../../assets/svg/hot-chocolate-cup.svg")} alt="" />
                   </div>
