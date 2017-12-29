@@ -1,5 +1,6 @@
 const listing_header_images = require('./listing_header_images');
 const icons = require('./icons.model');
+const agents = require('./agent.model');
 const  mongoose = require('mongoose');
 const httpStatus = require('http-status');
 const APIError = require('../helpers/APIError');
@@ -61,6 +62,10 @@ const ListingSchema = new mongoose.Schema({
       type: String,
       require: true
     }
+  }],
+  agents: [{
+    type: mongoose.Schema.Types.ObjectId,
+    ref: 'agents'
   }]
 });
 
@@ -83,6 +88,7 @@ ListingSchema.statics = {
     .populate('headerImages')
     .populate('features.icon')
     .populate('facts.icon')
+    .populate('agents')
     .exec();
   },
   /**
@@ -94,6 +100,7 @@ ListingSchema.statics = {
     .populate('headerImages')
     .populate('features.icon')
     .populate('facts.icon')
+    .populate('agents')
     .exec();
   }
 }

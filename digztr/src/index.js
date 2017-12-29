@@ -34,6 +34,7 @@ const rootRoute = {
   getChildRoutes(location, cb) {
     cb(null, [
       require('./routes/ListingDetails'),
+      require('./routes/SampleRETS')
     ]);
   },
 };

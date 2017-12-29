@@ -4,15 +4,15 @@ import { connect } from 'react-redux';
 import * as IconActions from '../actions/Icon';
 
 class Icons extends Component {
-    handleChange(event){
-      console.log("dsafsdf");
-    }
     renderIcons(){
       return (
         this.props.icons.map((item,index) => {
           return (
             <div className="col-sm-3 text-center" key={index} style={{padding: "20px 0"}}>
-              <a onClick={() => this.props.handleSelect(item)} data-dismiss="modal"><img src={item.url} width="30" height="30" /> <span>{item.icon}</span></a>
+              <a onClick={() => this.props.handleSelect(item)} data-dismiss="modal">
+                <img src={item.url} width="30" height="30" /><br />
+                <span>{item.name}:{item.value}</span>
+              </a>
             </div>
           )
         })

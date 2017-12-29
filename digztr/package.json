@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@google/maps": "^0.4.5",
     "axios": "^0.17.1",
     "bootstrap": "^3.3.7",
     "bootstrap-slider": "^10.0.0",
