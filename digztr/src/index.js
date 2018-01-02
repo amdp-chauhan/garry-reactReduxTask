@@ -1,5 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import { render } from 'react-snapshot';
 import { Provider } from 'react-redux';
 import { createStore, combineReducers, applyMiddleware } from 'redux';
 import {  Router, Route,  browserHistory } from 'react-router';
@@ -58,7 +59,7 @@ const appElm = document.getElementById('root')
 /**
  * render Provider
  */
-ReactDOM.render(
+render(
   <Provider store={store}>
     <Router
       history={history}
