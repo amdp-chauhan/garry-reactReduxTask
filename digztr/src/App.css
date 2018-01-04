@@ -1,3 +1,8 @@
+.container {
+  padding-right: 10px !important;
+  padding-left: 10px !important;
+}
+
 #footer{
   background-color: #273d86;
     padding: 30px;

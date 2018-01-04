@@ -556,3 +556,8 @@ filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
   transition: 0.2s;
   display:block;
 }
+
+#scheduleModal{
+  width: 280px;
+  height: 322px;
+}

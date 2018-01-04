@@ -438,11 +438,14 @@ filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
   width: 30px;
   height: 47px;
 }
+.img-container{
+  border-radius: 90px;
+  overflow: hidden;
+}
+
 #sidenav .profile-pic .img-container{
   width: 40px;
-  border-radius: 90px;
   height: 40px;
-  overflow: hidden;
 }
 #sidenav .profile-pic .img-container img{
   height: 50px;
