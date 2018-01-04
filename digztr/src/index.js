@@ -6,6 +6,7 @@ import { createStore, combineReducers, applyMiddleware } from 'redux';
 import {  Router, Route,  browserHistory } from 'react-router';
 import { syncHistoryWithStore, routerReducer } from 'react-router-redux';
 import thunk from 'redux-thunk';
+import { CookiesProvider } from 'react-cookie';
 
 
 import './index.css';
@@ -35,6 +36,7 @@ const rootRoute = {
   getChildRoutes(location, cb) {
     cb(null, [
       require('./routes/ListingDetails'),
+      require('./routes/ListingList'),
       require('./routes/SampleRETS')
     ]);
   },
@@ -60,13 +62,15 @@ const appElm = document.getElementById('root')
  * render Provider
  */
 render(
-  <Provider store={store}>
-    <Router
-      history={history}
-      onUpdate={() => appElm.scrollIntoView()}
-      routes={rootRoute}
-    />
-  </Provider>,
+  <CookiesProvider>
+    <Provider store={store}>
+      <Router
+        history={history}
+        onUpdate={() => appElm.scrollIntoView()}
+        routes={rootRoute}
+      />
+    </Provider>
+  </CookiesProvider>,
   appElm
 );
 // registerServiceWorker();

@@ -47,7 +47,6 @@ class RequestForm extends Component {
     });
   }
   handleSubmit(e){
-    console.log('asdfsdf');
     e.preventDefault();
 
     let data = {
@@ -62,7 +61,7 @@ class RequestForm extends Component {
     this.props.agents.forEach(item => {
       if (item.checked) data.agents.push(item._id)
     });
-    console.log(data);
+
     axios.post(`${config.api.baseUrl}/api/inquiries`, data)
       .then(res => {
         this.clearFields();
