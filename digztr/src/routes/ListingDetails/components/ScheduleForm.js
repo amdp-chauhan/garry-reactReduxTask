@@ -2,7 +2,6 @@ import React,{Component} from 'react';
 import moment from 'moment';
 import axios from 'axios';
 import config from '../../../config';
-import $ from 'jquery';
 import { withCookies, Cookies } from 'react-cookie';
 
 class ScheduleForm extends Component {

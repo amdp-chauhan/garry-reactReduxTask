@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 import config from '../../../config';
+import { withCookies, Cookies } from 'react-cookie';
 
 class CheckBox extends Component {
   state = {
@@ -33,6 +34,15 @@ class RequestForm extends Component {
     email: "",
     message: ""
   };
+  componentWillMount() {
+    const { cookies } = this.props;
+
+    this.setState({
+      name: cookies.get('request_name'),
+      phone: cookies.get('request_phone'),
+      email: cookies.get('request_email')
+    })
+  }
   componentDidMount(){
     this.props.agents.forEach(item => {
       item.checked = 0;
@@ -68,12 +78,21 @@ class RequestForm extends Component {
       });
   }
   handleNameChange(e){
+    const { cookies } = this.props;
+
+    cookies.set('request_name', e.target.value, { path: '/' });
     this.setState({name: e.target.value});
   }
   handlePhoneChange(e){
+    const { cookies } = this.props;
+
+    cookies.set('request_phone', e.target.value, { path: '/' });
     this.setState({phone: e.target.value});
   }
   handleEmailChange(e){
+    const { cookies } = this.props;
+
+    cookies.set('request_email', e.target.value, { path: '/' });
     this.setState({email: e.target.value});
   }
   handleMessageChange(e){
@@ -174,5 +193,4 @@ class RequestForm extends Component {
     );
   }
 }
-
-export default RequestForm;
+export default withCookies(RequestForm);
