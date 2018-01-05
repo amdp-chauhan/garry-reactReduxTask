@@ -17,7 +17,7 @@ const initialState = {
   nearbyHomes: [],
   headerImages: [],
   agents: [],
-  geo: {lat:13.6236789,lng:123.1918884}
+  geo: {lat:null,lng:null}
 }
 
 /**
@@ -48,7 +48,7 @@ export default function Listing(state = initialState, action) {
       if (action.response) {
         let res = action.response;
         return {
-          _id: "",
+          _id: res._id,
           name: "Sample SimplyRETS Property",
           price: res.listPrice,
           description: res.remarks,
@@ -58,7 +58,7 @@ export default function Listing(state = initialState, action) {
             {type:'Bathrooms',value:res.property.bathsFull},
             {type:'Bedrooms',value:res.property.bedrooms}
           ],
-          features: [],
+          features: res.features,
           facts: [],
           interiors: [],
           construction: [],

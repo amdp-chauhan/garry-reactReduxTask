@@ -11,15 +11,15 @@ const APIError = require('../helpers/APIError');
 const ListingSchema = new mongoose.Schema({
   name: {
     type: String,
-    require: true
+    require: false
   },
   price: {
     type: Number,
-    require: true
+    require: false
   },
   description: {
     type: String,
-    require: true
+    require: false
   },
   meta: {
     type: [],
@@ -37,36 +37,40 @@ const ListingSchema = new mongoose.Schema({
     icon: {
       type: mongoose.Schema.Types.ObjectId,
       ref: 'icons',
-      require: true
+      require: false
     },
     name: {
       type: String,
-      require: true
+      require: false
     },
     value: {
       type: String,
-      require: true
+      require: false
     }
   }],
   facts: [{
     icon: {
       type: mongoose.Schema.Types.ObjectId,
       ref: 'icons',
-      require: true
+      require: false
     },
     type: {
       type: String,
-      require: true
+      require: false
     },
     value: {
       type: String,
-      require: true
+      require: false
     }
   }],
   agents: [{
     type: mongoose.Schema.Types.ObjectId,
     ref: 'agents'
-  }]
+  }],
+  mlsId: {
+    type: Number,
+    require: false
+  }
 });
 
 /**
@@ -101,6 +105,14 @@ ListingSchema.statics = {
     .populate('features.icon')
     .populate('facts.icon')
     .populate('agents')
+    .exec();
+  },
+  /**
+  * Get Listing By MLS No.
+  */
+  get_by_mls(id) {
+    return this.findOne({"mlsId":id})
+    .populate('features.icon')
     .exec();
   }
 }

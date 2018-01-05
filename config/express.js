@@ -65,7 +65,7 @@ app.use((err, req, res, next) => {
 });
 
 // Serve React App on Production
-if (config.env==='production') {
+// if (config.env==='production') {
   // Serve up production assets
   app.use(express.static('digztr/build'));
 
@@ -79,7 +79,7 @@ if (config.env==='production') {
     }
     res.sendFile(path.resolve(__dirname,'../', 'digztr', 'build', 'index.html'));
   });
-}
+// }
 
 // catch 404 and forward to error handler
 app.use((req, res, next) => {

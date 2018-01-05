@@ -8,5 +8,5 @@ export STREAM_KEY=
 export STREAM_SECRET=
 export API_URL=http://localhost:8000
 export API_PORT=8000
-export PORT=8000
+export PORT=3000
 export IMGIX_BASE_URL=https://digztr-temp.imgix.net

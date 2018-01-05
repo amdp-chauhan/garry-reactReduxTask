@@ -111,7 +111,7 @@ class FloatRight extends Component {
   render(){
     return(
       <div className="col-sm-12 col-md-3 hidden-sm hidden-xs">
-        <div id="sidenav">
+        <div id="sidenav" style={{zIndex: 1041}}>
           <RequestForm
             agents={this.props.agents}
             />

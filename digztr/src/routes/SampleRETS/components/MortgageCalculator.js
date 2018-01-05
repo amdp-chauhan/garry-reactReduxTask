@@ -153,7 +153,7 @@ class MortgageSliders extends Component {
 
 class MortgageCalculator extends Component {
   handlePaymentUpdate(value){
-    this.state.payment+=value;
+    this.setState({payment:this.state.payment+value});
   }
   render() {
     return (

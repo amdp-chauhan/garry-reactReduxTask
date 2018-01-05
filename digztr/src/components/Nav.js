@@ -22,7 +22,7 @@ export default class Nav extends Component {
                     <h5 style={{marginTop:"20px",fontSize:"14px"}} className="violet-text">  <img src={require("../assets/svg/menu.svg")} alt="" width="15" /> MENU</h5>
                   </div>
                 </a>
-                <a href="index.html" className="active-link">
+                <a href="#" className="active-link">
                   <div className="hidden-xs hidden-sm col-md-1 text-center no-pad">
                     <h5 style={{margin:"10px 0",padding: "13px 0 12px 0",fontSize:"14px",borderRight:"1px solid lightgray"}} className="violet-text">BUY HOME <img src={require("../assets/svg/down-arrow.svg")} alt="" width="12" /></h5>
                   </div>
@@ -33,7 +33,7 @@ export default class Nav extends Component {
                       </div>
                   </div>
                 </a>
-                <a href="advancefilter.page.html">
+                <a href="#">
                   <div className="hidden-xs hidden-sm col-md-1 text-center no-pad ">
                     <h5 style={{padding:"23px 0",fontSize:"14px"}} className="violet-03-bg">FILTER <img src={require("../assets/svg/down-arrow-white.svg")} alt="" width="12" /></h5>
                   </div>

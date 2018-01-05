@@ -8,11 +8,14 @@
     "api": "nodemon index.js",
     "app": "npm run start --prefix digztr",
     "dev": "concurrently \"npm run api\" \"npm run app\"",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "postinstall": "cd digztr && npm install && npm run build"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "async": "^2.6.0",
+    "axios": "^0.17.1",
     "bluebird": "^3.5.1",
     "body-parser": "^1.18.2",
     "compression": "^1.7.1",
@@ -30,6 +33,7 @@
     "method-override": "^2.3.10",
     "mongoose": "^4.13.4",
     "morgan": "^1.9.0",
+    "nodemailer": "^4.4.1",
     "nodemon": "^1.12.1",
     "winston": "^2.4.0"
   }

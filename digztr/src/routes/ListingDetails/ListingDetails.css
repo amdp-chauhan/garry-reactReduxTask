@@ -117,11 +117,30 @@ filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
   margin-top: 5px;
   margin-bottom: 5px;
 }
+.add-feature-cont {
+  height: 144px;
+  width: 197.44px;
+  position: relative;
+  border: 2px dotted lightgray;
+  margin: 0 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+.add-feature-cont .add-feature-button h4{
+  font-size: 15px;
+  color: #ff7f25;
+}
 .house-feature{
-
+  height: 151px;
+  margin-bottom: 20px;
 }
 .house-feature span{
   font-size: 15px;
+}
+.house-feature a{
+  cursor: pointer;
 }
 .feature-text{
   margin: 0 20px;
@@ -438,11 +457,14 @@ filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
   width: 30px;
   height: 47px;
 }
+.img-container{
+  border-radius: 90px;
+  overflow: hidden;
+}
+
 #sidenav .profile-pic .img-container{
   width: 40px;
-  border-radius: 90px;
   height: 40px;
-  overflow: hidden;
 }
 #sidenav .profile-pic .img-container img{
   height: 50px;
