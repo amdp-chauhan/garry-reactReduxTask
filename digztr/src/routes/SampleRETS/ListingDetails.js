@@ -201,8 +201,6 @@ class ListingDetails extends Component {
         </div>
         <div className="img-container">
           {this.renderHeaderImages()}
-          {this.renderHeaderImages()}
-          {this.renderHeaderImages()}
         </div>
       </div>
     );
