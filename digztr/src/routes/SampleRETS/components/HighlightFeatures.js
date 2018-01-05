@@ -57,7 +57,7 @@ class HighlightFeatures extends Component {
         console.log(res);
         this.setState({disabledSubmitState:true});
         this.setState({submitState:"Add New Feature"});
-        this.props.dispatch(ListingActions.load());
+        this.props.dispatch(ListingActions.loadRETS());
         this.resetStates();
       })
       .catch(res => {
@@ -69,7 +69,8 @@ class HighlightFeatures extends Component {
   handleSubmit(item) {
     this.setState({selectedIcon: item});
     let data = [];
-    console.log(item);
+    this.setState({disabledSubmitState:true});
+    this.setState({submitState:"Updating Features..."});
     this.props.features.map(item => {
       data.push({
         name: item.name,
@@ -191,19 +192,29 @@ class HighlightFeatures extends Component {
         <h5 className="sec-title violet-text">High Light Features</h5>
         <div className="row">
           {this.renderList()}
+          <a
+            data-toggle="modal"
+            data-target="#iconModal"
+            >
+            <div className="col-sm-6 col-md-3 text-center add-feature-cont">
+                <div className="add-feature-button">
+                  <span><img src={require('../../../assets/svg/plus-button.svg')} height="30" width="30" /></span>
+                  <h4>{this.state.submitState}</h4>
+                </div>
+            </div>
+          </a>
         </div>
         <br />
         <div className="row text-center" style={{margin: "0 20px"}}>
-          <button
+          {/**<button
             type="button"
             class="btn btn-overwrite btn-block"
             data-toggle="modal"
             data-target="#iconModal"
             >
             {this.state.submitState}
-          </button>
+          </button>**/}
         </div>
-        <br />
         <div className="row text-center feature-text">
           <p>This home has {this.props.features.length}/5 hottest features!  It will be sold fast</p>
         </div>
