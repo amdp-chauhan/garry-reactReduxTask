@@ -4,7 +4,7 @@ export default class SupportCenter extends Component {
 
     render() {
         return (
-          <div id="section-13">
+          <div id="section-list-13">
             <div className="content">
               <div className="row">
                 <div className="col-xs-12 col-sm-6 col-md-3">

@@ -3,7 +3,7 @@ import React,{Component} from 'react';
 export default class Subscribe extends Component {
     render() {
         return (
-          <div id="section-12">
+          <div id="section-list-12">
             <div className="content row">
               <div className="row">
                 <div className="col-xs-12 col-sm-4 text-right">

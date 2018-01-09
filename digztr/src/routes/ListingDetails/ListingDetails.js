@@ -260,7 +260,7 @@ class ListingDetails extends Component {
   }
   render() {
     return (
-      <div>
+      <div id="details">
         {this.renderCarousel()}
         <div className="row">
           <div className="col-sm-12 col-md-9">

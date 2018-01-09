@@ -3,7 +3,7 @@ import React,{Component} from 'react';
 export default class Nav extends Component {
     render() {
         return (
-          <div>
+          <div id="header">
           <nav className="digztr-nav navbar navbar-default navbar-fixed-top">
             <div className="container-fluid">
               <div className="row">

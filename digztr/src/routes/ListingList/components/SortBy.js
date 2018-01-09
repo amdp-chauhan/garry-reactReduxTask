@@ -4,12 +4,12 @@ export default class SortBy extends Component {
 
     render() {
         return (
-          <div id="section-01">
+          <div id="section-list-01">
             <div className="content">
-              <div className="row">  
+              <div className="row">
 
                 <div className="col-xs-12 col-sm-6 col-md-4">
-                
+
                 </div>
 
                 <div className="col-xs-12 col-sm-6 col-md-4 violet-text">
