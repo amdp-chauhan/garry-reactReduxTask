@@ -1,5 +1,5 @@
 module.exports = {
-  path: '/rets',
+  path: '/listings/rets/:id',
 
   /**
      * getComponent
