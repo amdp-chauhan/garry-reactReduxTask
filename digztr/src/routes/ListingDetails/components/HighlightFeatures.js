@@ -57,7 +57,7 @@ class HighlightFeatures extends Component {
         console.log(res);
         this.setState({disabledSubmitState:true});
         this.setState({submitState:"Add New Feature"});
-        this.props.dispatch(ListingActions.load());
+        this.props.dispatch(ListingActions.loadById(this.props._id));
         this.resetStates();
       })
       .catch(res => {

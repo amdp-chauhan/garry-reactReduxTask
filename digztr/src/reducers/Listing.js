@@ -30,24 +30,16 @@ const initialState = {
  * @constructor
  */
 export default function Listing(state = initialState, action) {
+
   switch(action.type) {
-    case ListingActions.LOAD:
+    case ListingActions.LOAD_BY_ID:
       if (action.response) {
         return action.response;
-        // return Object.assign({}, state, {
-        //   id: action.response.id,
-        //   name: action.response.name,
-        //   price: action.response.price,
-        //   description: action.response.description,
-        //   meta: action.response.meta,
-        // });
       }
       return initialState;
-      break;
     case ListingActions.LOAD_RETS:
       if (action.response) {
         let res = action.response;
-        console.log(res.photos);
         return {
           _id: res._id,
           name: "Sample SimplyRETS Property",

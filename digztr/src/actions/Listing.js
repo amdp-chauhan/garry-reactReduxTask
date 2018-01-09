@@ -5,39 +5,39 @@ import config from '../config';
  * LOAD
  * @type {string}
  */
-export const LOAD = 'LISTING_LOAD';
+export const LOAD_BY_ID = 'LISTING_LOAD_BY_ID';
 
 /**
  * _loadRequest
  * @private
  */
-export const _loadRequest = () => ({ type: LOAD });
+export const _loadByIdRequest = () => ({ type: LOAD_BY_ID });
 
 /**
  * _loadResponse
  * @param response
  * @private
  */
-export const _loadResponse = (response) => ({
-	type: LOAD,
+export const _loadByIdResponse = (response) => ({
+	type: LOAD_BY_ID,
 	response,
 });
 
 /**
- * load
+ * load by ID
  * Gets profile data from the API for a given user id
  * @param userID user id
  * @returns {Function}
  */
- export function load() {
-   return (dispatch, getState) => {
-     dispatch(_loadRequest());
-     axios.get(`${config.api.baseUrl}/api/listings`)
-      .then(res => {
-        dispatch(_loadResponse(res.data[0]));
-      });
-   }
+export function loadById(id) {
+ return (dispatch, getState) => {
+   dispatch(_loadByIdRequest());
+   axios.get(`${config.api.baseUrl}/api/listings/${id}`)
+    .then(res => {
+      dispatch(_loadByIdResponse(res.data));
+    });
  }
+}
 
  /**
   * LOAD
