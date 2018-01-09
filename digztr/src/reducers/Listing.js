@@ -47,6 +47,7 @@ export default function Listing(state = initialState, action) {
     case ListingActions.LOAD_RETS:
       if (action.response) {
         let res = action.response;
+        console.log(res.photos);
         return {
           _id: res._id,
           name: "Sample SimplyRETS Property",
@@ -63,7 +64,7 @@ export default function Listing(state = initialState, action) {
           interiors: [],
           construction: [],
           nearbyHomes: [],
-          headerImages: [],
+          headerImages: res.photos,
           agents: [{
             "lastName": res.agent.lastName,
             "contact": "",

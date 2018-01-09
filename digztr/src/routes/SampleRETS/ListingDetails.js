@@ -178,7 +178,7 @@ class ListingDetails extends Component {
     return (
       this.props.listing.headerImages.map((item,index) => {
         return (
-          <img key={index} className="img-item" src={`${item.image}?auto=enhance&w=1740&h=978&fit=crop&fm=jpeg`} alt="" />
+          <img key={index} className="img-item" src={`${item}?auto=enhance&w=1740&h=978&fit=crop&fm=jpeg`} alt="" />
         )
       })
     );
@@ -200,6 +200,8 @@ class ListingDetails extends Component {
           </div>
         </div>
         <div className="img-container">
+          {this.renderHeaderImages()}
+          {this.renderHeaderImages()}
           {this.renderHeaderImages()}
         </div>
       </div>

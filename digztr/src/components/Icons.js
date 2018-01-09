@@ -9,7 +9,11 @@ class Icons extends Component {
         this.props.icons.map((item,index) => {
           return (
             <div className="col-sm-3 text-center" key={index} style={{padding: "20px 0"}}>
-              <a onClick={() => this.props.handleSelect(item)} data-dismiss="modal">
+              <a
+                onClick={() => this.props.handleSelect(item)}
+                data-dismiss="modal"
+                style={{cursor: "pointer"}}
+                >
                 <img src={item.url} width="30" height="30" /><br />
                 <span>{item.name}:{item.value}</span>
               </a>
