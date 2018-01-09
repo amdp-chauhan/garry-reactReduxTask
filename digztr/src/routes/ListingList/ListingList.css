@@ -1,35 +1,35 @@
 
-#section-01 div.content{
+#section-list-01 div.content{
   padding: 20px;
   margin-top: 70px;
 }
 
 
-#section-02 .card{
+#section-list-02 .card{
   box-shadow: 1px 1px 10px #4c4c4c;
 
   height: 250px;
 }
-#section-02 .card-img-container{
+#section-list-02 .card-img-container{
   width: 100%;
   overflow: hidden;
 }
-#section-02 .card-img-container img{
+#section-list-02 .card-img-container img{
   width: 100%;
   height: 100%;
 }
-#section-02 .card-img-container .caption{
+#section-list-02 .card-img-container .caption{
   position: relative;
   text-align: center;
   color: white;
   margin-top: 4px;
 }
-#section-02 div.row {
+#section-list-02 div.row {
   margin-top: 20px;
   width:100%;
 }
 
-#section-02 .icon{
+#section-list-02 .icon{
   border-radius: 50%;
   background-color: gray;
   width:70px;
@@ -38,24 +38,24 @@
 
 }
 
-#section-03{
+#section-list-03{
  margin-top: 20px;
  margin-left: 10px;
 }
-#section-03 .card{
+#section-list-03 .card{
   box-shadow: 1px 1px 10px #4c4c4c;
 }
-#section-03 .card-title{
+#section-list-03 .card-title{
   padding: 8px;
 }
-#section-03 .card-title h5{
+#section-list-03 .card-title h5{
   font-size: 13px;
 }
-#section-03 .card-content{
+#section-list-03 .card-content{
   padding: 20px 20px 20px 20px;
   background-color: white;
 }
-#section-03 .card-content .row{
+#section-list-03 .card-content .row{
   margin-bottom: 10px;
 }
 
@@ -66,23 +66,23 @@ select{
 
 }
 
-.sortby{
+#list-view .sortby{
   width: 100%;
   border-radius: 25px;
   height: 40px;
   padding: 10px;
 }
 
-.section-margin{
+#list-view .section-margin{
   margin: 10px 50px 60px 50px;
 }
-.aa{
+#list-view .aa{
   width:100%;
 margin-right: 0px !important;
 }
 
 /* Customize the label (the container) */
-.container {
+#list-view .container {
   display: block;
   position: relative;
   padding-left: 35px;
@@ -95,14 +95,14 @@ margin-right: 0px !important;
 }
 
 /* Hide the browser's default checkbox */
-.container input {
+#list-view .container input {
   position: absolute;
   opacity: 0;
   cursor: pointer;
 }
 
 /* Create a custom checkbox */
-.checkmark {
+#list-view .checkmark {
   position: absolute;
   top: 0;
   left: 0;
@@ -114,26 +114,26 @@ margin-right: 0px !important;
 }
 
 /* On mouse-over, add a grey background color */
-.container:hover input ~ .checkmark {
+#list-view .container:hover input ~ .checkmark {
   background-color: #ccc;
 }
 
 
 
 /* Create the checkmark/indicator (hidden when not checked) */
-.checkmark:after {
+#list-view .checkmark:after {
   content: "";
   position: absolute;
   display: none;
 }
 
 /* Show the checkmark when checked */
-.container input:checked ~ .checkmark:after {
+#list-view .container input:checked ~ .checkmark:after {
   display: block;
 }
 
 /* Style the checkmark/indicator */
-.container .checkmark:after {
+#list-view .container .checkmark:after {
   left: 9px;
   top: 5px;
   width: 5px;
@@ -145,12 +145,12 @@ margin-right: 0px !important;
   transform: rotate(45deg);
 }
 
-h1,h2,h3,h4,h5{
+#list-view h1,h2,h3,h4,h5{
   margin-bottom: 5px;
 }
 
 
-.viewType{
+#list-view .viewType{
   padding: 7px 15px 7px 15px;
   margin-left:2px;
 }
@@ -159,8 +159,8 @@ h1,h2,h3,h4,h5{
 
 
 /*To Remove Google Maps Footer, Logo and Copyright Labels*/
-a[href^="http://maps.google.com/maps"]{display:none !important}
-a[href^="https://maps.google.com/maps"]{display:none !important}
+#list-view a[href^="http://maps.google.com/maps"]{display:none !important}
+#list-view a[href^="https://maps.google.com/maps"]{display:none !important}
 
 .gmnoprint a, .gmnoprint span, .gm-style-cc {
     display:none;
@@ -171,36 +171,36 @@ a[href^="https://maps.google.com/maps"]{display:none !important}
 /*end*/
 
 /*Plisting CSS*/
-.no-pad{
+#list-view .no-pad{
   padding: 0px;
 }
-.no-margin{
+#list-view .no-margin{
   margin: 0px;
 }
-.margin-bottom-10{
+#list-view .margin-bottom-10{
   margin-bottom: 10px;
 }
-.margin-bottom-20{
+#list-view .margin-bottom-20{
   margin-bottom: 20px;
 }
-.section{
+#list-view .section{
   margin: 10px 0 50px 0;
 }
-p.sec-title{
+#list-view p.sec-title{
   font-size: 16px;
   margin-bottom: 0px;
 }
-.wishlist{
+#list-view .wishlist{
   margin-top: 20px;
 }
-.wishlist span{
+#list-view .wishlist span{
   font-size: 15px;
 }
-h5.sec-title{
+#list-view h5.sec-title{
   padding-left: 40px;
   margin-bottom: 40px;
 }
-h5.sec-secondary-title{
+#list-view h5.sec-secondary-title{
   padding-left: 40px;
   margin-top: 40px;
   margin-bottom: 40px;
@@ -221,17 +221,7 @@ span.sec-content, a.sec-content{
   line-height: 25px;
 }
 
-.digztr-nav {
-  z-index: 10;
-  margin-bottom: 0px;
-  border-bottom-width: 0px;
-  height:60px;
-  padding: inherit 20px;
-}
-.digztr-nav .active-link div {
-  background-color:#eaeaea;
-}
-.search-btn{
+#list-view .search-btn{
   margin: 2px;
   height: 56px;
   width: 60px;;
@@ -239,15 +229,15 @@ span.sec-content, a.sec-content{
   background: -webkit-linear-gradient(to left, #ff9d00, #ff7c19) !important;  /* Chrome 10-25, Safari 5.1-6 */
   background: linear-gradient(to left, #ff9d00, #ff7c19) !important; /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
-.search-btn img{
+#list-view .search-btn img{
   width: 35px;
   margin: 10px 12px;
 }
 
-.card-shadow{
+#list-view .card-shadow{
   box-shadow: 1px 1px 10px #d0d0d0;
 }
-.rotate-90{
+#list-view .rotate-90{
 /* Safari */
 -webkit-transform: rotate(-90deg);
 
@@ -266,12 +256,12 @@ filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
 .hr-dig{
   border-top: dotted 1px; margin: 5px 0;
 }
-#section-02 div.map{
+#section-list-02 div.map{
   height: 180px;
   border-radius: 10px;
   overflow: hidden;
 }
-.btn-img{
+#list-view .btn-img{
   margin-left: 10px;
   margin-right: 5px;
   margin-top: 5px;
@@ -291,44 +281,44 @@ filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
   padding: 10px;
   margin-top: 40px;
 }
-.feature-text p{
+#list-view .feature-text p{
   color: #ffd6b0;
   font-size: 18px;
   margin: 0 !important;
 }
 
-.fact-class h5{
+#list-view .fact-class h5{
   font-size: 14px;
   font-weight: bold;
 }
-.fact-class span{
+#list-view .fact-class span{
   font-size: 14px;
 }
-#section-04 .fact{
+#section-list-04 .fact{
   margin-bottom: 20px;
 }
-#section-05 .interior-features-content p{
+#section-list-05 .interior-features-content p{
   font-size: 16px;
 }
-#section-06 .chart-text{
+#section-list-06 .chart-text{
   margin-top: 20px;
   font-size: 17px;
 }
-#section-06 .row .col-xs-3 h5{
+#section-list-06 .row .col-xs-3 h5{
   font-size: 18px;
 }
-#section-06 .row .col-xs-3 span{
+#section-list-06 .row .col-xs-3 span{
   font-size: 12px;
 }
 
 
-#section-07 .zent-value{
+#section-list-07 .zent-value{
   margin-top: 20px;
   padding-left: 40px;
   font-weight: bold;
 }
 
-#section-09 .doughnut-text{
+#section-list-09 .doughnut-text{
   width: 100%;
   height: 40px;
   position: absolute;
@@ -341,66 +331,66 @@ filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
 }
 
 @media (max-width: 900px){
- #section-09 .doughnut-text b{
+ #section-list-09 .doughnut-text b{
    font-size: 12px;
   }
 }
 
-#section-10 .map{
+#section-list-10 .map{
   width: 100%;
   height: 350px;
   overflow: hidden;
 }
-#section-10 .nf-option img{
+#section-list-10 .nf-option img{
   padding: 20px 0;
 
 }
-#section-10 .nf-item{
+#section-list-10 .nf-item{
   border-bottom: 1px solid lightgray;
 }
-#section-10 .nf-item-2{
+#section-list-10 .nf-item-2{
   height:70px;
   padding:20px;
 }
-#section-10 .nf-item:hover, #section-10 .nf-item-2:hover{
+#section-list-10 .nf-item:hover, #section-list-10 .nf-item-2:hover{
   background: #e9e9e9;  /* fallback for old browsers */
 }
-#section-10 .nf-active{
+#section-list-10 .nf-active{
   background: #fc4a1a;  /* fallback for old browsers */
   background: -webkit-linear-gradient(to right, #ff9d00, #ff7c19);  /* Chrome 10-25, Safari 5.1-6 */
   background: linear-gradient(to right, #ff9d00, #ff7c19); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
-#section-10 .nf-active:hover{
+#section-list-10 .nf-active:hover{
   background: #ff9d00;
 }
 
-#section-11{
+#section-list-11{
   background-color: #efefef;
 }
-#section-11 .container{
+#section-list-11 .container{
   padding-bottom: 40px;
 }
-#section-11 .card{
+#section-list-11 .card{
   background-color: white;
   box-shadow: 0px 0px 15px #999;
   padding: 5px;
   margin: 20px;
 }
-#section-11 .card button{
+#section-list-11 .card button{
   font-size: 13px;
 }
-#section-11 .card-footer{
+#section-list-11 .card-footer{
   padding: 15px 10px 10px 10px;
 }
-#section-11 .card-img-container{
+#section-list-11 .card-img-container{
   height: 150px;
   width: 100%;
   overflow: hidden;
 }
-#section-11 .card-img-container img{
+#section-list-11 .card-img-container img{
   width: 100%;
 }
-#section-11 .card-img-container .caption{
+#section-list-11 .card-img-container .caption{
   position: relative;
   text-align: center;
   color: white;
@@ -408,133 +398,133 @@ filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
 }
 
 /* Top left text */
-.top-left {
+#list-view .top-left {
     position: absolute;
     top: 0px;
     left: 0px;
 }
 
 /* Top right text */
-.top-right {
+#list-view .top-right {
     position: absolute;
     top: 8px;
     right: 16px;
 }
 
-#section-11 .card-img-container .caption .caption-blue-box{
+#section-list-11 .card-img-container .caption .caption-blue-box{
   background-color: #273d86;
   color: #e1e1e1;
   padding: 5px 10px;
 }
-#section-11 .card-img-container .caption .caption-heart{
+#section-list-11 .card-img-container .caption .caption-heart{
   margin-left: 30%;
   float:right;
 }
-#section-11 .card-content{
+#section-list-11 .card-content{
   margin-top: 10px;
 }
-#section-11 .card-content p{
+#section-list-11 .card-content p{
   font-size: 13px;
   margin: 0;
   color: #666
 }
-#section-11 .card-content span{
+#section-list-11 .card-content span{
   font-size: 11px;
   color: #a5a5a5
 }
-#section-11 .card-content h5{
+#section-list-11 .card-content h5{
   font-size: flex;
   font-weight: bold;
 }
-#section-11 .card-content b{
+#section-list-11 .card-content b{
   font-size: 12px;
   font-weight: normal;
 }
-#section-11 .card-footer button.btn{
+#section-list-11 .card-footer button.btn{
   background: #fc4a1a;  /* fallback for old browsers */
   background: -webkit-linear-gradient(to right, #ff9d00, #ff7c19);  /* Chrome 10-25, Safari 5.1-6 */
   background: linear-gradient(to right, #ff9d00, #ff7c19); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
   color: #fff7d6;
 }
-#section-12 div.content{
+#section-list-12 div.content{
   padding: 20px;
   background: #fc4a1a;  /* fallback for old browsers */
   background: -webkit-linear-gradient(to left, #ff9d00, #ff7c19);  /* Chrome 10-25, Safari 5.1-6 */
   background: linear-gradient(to left, #ff9d00, #ff7c19); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 
 }
-#section-12 h4, #section-12 span, #section-12 input, #section-12 a{
+#section-list-12 h4, #section-list-12 span, #section-list-12 input, #section-list-12 a{
   color: #fff7d6;
 }
-#section-12 .in-email input{
+#section-list-12 .in-email input{
   background-color: transparent;
   border: 0px;
   width: 100%;
   text-align: left !important;
 }
 
-#section-12 .btn-subscribe{
+#section-list-12 .btn-subscribe{
   border: 2px solid #fff7d6;
   color: #fff7d6;
   background-color: transparent;
   padding: 10px 40px;
   margin-top: 10px;
 }
-#section-13 .content{
+#section-list-13 .content{
   padding: 50px 90px;
 }
-#section-13 h5{
+#section-list-13 h5{
   color: #6d6d6d;
   margin-bottom: 20px;
 }
-#section-13 li{
+#section-list-13 li{
   color: #6d6d6d;
   font-size: 15px;
   line-height: 30px;
   list-style-type: square;
 }
-#section-13 ul{
+#section-list-13 ul{
   padding-left: 18px;
 }
-#section-13 p{
+#section-list-13 p{
   color: #6d6d6d;
 }
 
-#sidenav{
+#list-view #sidenav{
     z-index: 100;
 }
-#sidenav .card{
+#list-view #sidenav .card{
   width: 300px;
   box-shadow: 1px 1px 10px #4c4c4c;
 }
-#sidenav .card-title{
+#list-view #sidenav .card-title{
   padding: 8px;
 }
-#sidenav .card-title h5{
+#list-view #sidenav .card-title h5{
   font-size: 13px;
 }
-#sidenav .card-content{
+#list-view #sidenav .card-content{
   padding: 10px 10px 10px 10px;
   background-color: white;
 }
-#sidenav .card-content .row{
+#list-view #sidenav .card-content .row{
   margin-bottom: 10px;
 }
-#sidenav .call span{
+#list-view #sidenav .call span{
   font-size: 11px;
 }
-#sidenav .call input{
+#list-view #sidenav .call input{
   border: 1px solid #273d86;
   color: #ff7f25;
 }
-#sidenav .forms input, #sidenav .forms textarea{
+#list-view #sidenav .forms input, #list-view #sidenav .forms textarea{
   margin-bottom: 8px;
   font-size: 12px;
 }
-#sidenav .calendar-box{
+#list-view #sidenav .calendar-box{
   margin: 0 30px;
 }
-#sidenav .calendar-box .item-calendar{
+#list-view #sidenav .calendar-box .item-calendar{
   width: 47px;
   height:47px;
   margin: 0 4px;
@@ -542,96 +532,96 @@ filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
   background-color: #e2e2e2;
   border: 1px solid #273d86;
 }
-#sidenav .item-calendar .cal-week{
+#list-view #sidenav .item-calendar .cal-week{
   font-size: 10px;
   width: 45px;
   margin: 0 4px 0 0;
   border-radius: 3px 3px 0 0;
 }
-#sidenav .item-calendar .cal-day{
+#list-view #sidenav .item-calendar .cal-day{
   font-weight: bold;
   margin: 0px;
 }
-#sidenav .item-calendar .cal-month{
+#list-view #sidenav .item-calendar .cal-month{
   font-size: 10px;
   margin: 0px;
   margin-top: -3px;
 }
-#sidenav .item-calendar .cal-text{
+#list-view #sidenav .item-calendar .cal-text{
   margin: 12px 0;
 }
-#sidenav .item-calendar a:hover{
+#list-view #sidenav .item-calendar a:hover{
   text-decoration: none;
 }
 
-#sidenav .carousel {
+#list-view #sidenav .carousel {
   margin-bottom: 10px;
 }
 
-#sidenav .carousel .item {
+#list-view #sidenav .carousel .item {
   height: 30px;
 }
 
-#sidenav .carousel-buttons {
+#list-view #sidenav .carousel-buttons {
   width: 100%;
   color:#666;
   bottom:1px;
 }
-#sidenav .carousel-buttons > div {
+#list-view #sidenav .carousel-buttons > div {
   padding:10px;
   border:1px solid #666;
 }
-#sidenav .carousel-buttons a {
+#list-view #sidenav .carousel-buttons a {
   color:#666;
   display:block;
   line-height:30px;
 }
-#sidenav .progress{
+#list-view #sidenav .progress{
   margin: 0 30px;
   height: 5px;
 }
-#sidenav .progress-bar-success{
+#list-view #sidenav .progress-bar-success{
   background-color: #adadad;
 }
-#sidenav .carousel-control.right, .carousel-control.left{
+#list-view #sidenav .carousel-control.right, .carousel-control.left{
   background: none;
   width: 30px;
   height: 47px;
 }
-#sidenav .profile-pic .img-container{
+#list-view #sidenav .profile-pic .img-container{
   width: 40px;
   border-radius: 90px;
   height: 40px;
   overflow: hidden;
 }
-#sidenav .profile-pic .img-container img{
+#list-view #sidenav .profile-pic .img-container img{
   height: 50px;
 }
 /* slider */
 #RGB {
 	background: rgb(128, 128, 128);
 }
-.slider-track{
+#list-view .slider-track{
   border-radius: 0;
   border: 2px solid #e8e8e8;
 
 }
-.slider.slider-horizontal{
+#list-view .slider.slider-horizontal{
   width: 75%;
 }
-.slider-track-high{
+#list-view .slider-track-high{
   border-radius: 0;
   background: #bfbfbf;
 }
-.slider-track-low{
+#list-view .slider-track-low{
   border-radius: 0;
   background: #bfbfbf;
 }
-.slider-selection {
+#list-view .slider-selection {
 	background: #ff7f25;
   border-radius: 0;
 }
-.slider-handle {
+#list-view .slider-handle {
   border-radius: 5px;
   border: 1px solid white;
   background: #fc4a1a;  /* fallback for old browsers */
@@ -640,19 +630,19 @@ filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
 }
 
 /* doughnut  inner text */
-.donut-inner {
+#list-view .donut-inner {
    margin-top: -100px;
    margin-bottom: 100px;
 }
-.donut-inner h5 {
+#list-view .donut-inner h5 {
    margin-bottom: 5px;
    margin-top: 0;
 }
-.donut-inner span {
+#list-view .donut-inner span {
    font-size: 12px;
 }
 
-.push-left{
+#list-view .push-left{
   float:left;
 }
 
@@ -683,34 +673,34 @@ filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
   margin-top: 450px;
   width: 150px;
 }
-.img-item{
+#list-view .img-item{
   position:absolute;
   display:none;
 }
-.c-img-active{
+#list-view .c-img-active{
   z-index: 6;
   margin-left: 50px;
   transition: 0.5s;
   display:block;
 }
-.c-item-left{
+#list-view .c-item-left{
   z-index: 4;
   transition: 0.4s;
   display:block;
 }
-.c-first-right{
+#list-view .c-first-right{
   z-index: 3;
   margin-left: 20%;
   transition: 0.4s;
   display:block;
 }
-.c-second-right{
+#list-view .c-second-right{
   z-index: 2;
   margin-left: 40%;
   transition: 0.3s;
   display:block;
 }
-.c-third-right{
+#list-view .c-third-right{
   z-index: 1;
   margin-left: 60%;
   transition: 0.2s;

@@ -82,7 +82,7 @@ export default class HomeListItem extends Component{
 	render() {
 		console.log(this.props);
 		return (
-		<div id="section-02">
+		<div id="section-list-02">
 		  		{this.renderList()}
 		</div>
 

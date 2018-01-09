@@ -5,16 +5,16 @@ export default class FilterSearch extends Component {
 
 	render() {
 			return (
-				<div id="section-03">
+				<div id="section-list-03">
 					<div className="content">
-						<div className="row"> 							
+						<div className="row">
 							<div className="card">
 					            <div className="card-title text-center violet-03-bg">
 					              <h6>FILTER YOUR SEARCH</h6>
 					            </div>
 					            <div className="card-content">
 					              <h6 className="blue-text">LOCATION</h6>
-					            
+
 					                <input
 					                  type="text"
 					                  className="form-control"
@@ -26,14 +26,14 @@ export default class FilterSearch extends Component {
 			                  		<select name="">
 										<option value="">None:</option>
 									</select>
-									
+
 									<h6 className="blue-text">PROPERTY TYPE</h6>
 									<select name="">
 										<option value="">Villa</option>
 										<option value="">Apartment</option>
 										<option value="">Town House</option>
 									</select>
-					                	
+
 									<h6 className="blue-text">LIST TYPE</h6>
 									<label className="container">All
 									  <input type="checkbox" />
@@ -66,7 +66,7 @@ export default class FilterSearch extends Component {
 									</label>
 
 									<h6 className="blue-text">PROPERTY ATTRIBUTES</h6>
-	
+
 									<div className="row">
 										<div className="col-md-6">
 											<h6>Lot Size</h6>
@@ -82,7 +82,7 @@ export default class FilterSearch extends Component {
 												</select>
 											</div>
 										</div>
-										
+
 										<div className="col-md-6">
 											<h6>House Age</h6>
 											<div className="violet-text">
@@ -102,7 +102,7 @@ export default class FilterSearch extends Component {
 					          </div>
 
 						</div>
-						
+
 					</div>
 				</div>
 			);

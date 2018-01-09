@@ -19,7 +19,7 @@ class ListingList extends Component {
 	render(){
 		// console.log(this.props.listings.slice(0,3));
 		return (
-				<div>
+				<div id="list-view">
 					<SortBy />
 
 					<div className="row section-margin">
