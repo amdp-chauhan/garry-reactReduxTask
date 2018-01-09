@@ -67,10 +67,10 @@ export function loadById(id) {
   * @param userID user id
   * @returns {Function}
   */
-  export function loadRETS() {
+  export function loadRETS(id) {
     return (dispatch, getState) => {
       dispatch(_loadRETSRequest());
-      axios.get(`${config.api.baseUrl}/api/listings/rets/33368855`)
+      axios.get(`${config.api.baseUrl}/api/listings/rets/${id}`)
        .then(res => dispatch(_loadRETSResponse(res.data)));
     }
   }
