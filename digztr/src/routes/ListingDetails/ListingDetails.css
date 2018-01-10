@@ -61,29 +61,6 @@ span.sec-content, a.sec-content{
   line-height: 25px;
 }
 
-.digztr-nav {
-  z-index: 10;
-  margin-bottom: 0px;
-  border-bottom-width: 0px;
-  height:60px;
-  padding: inherit 20px;
-}
-.digztr-nav .active-link div {
-  background-color:#eaeaea;
-}
-.search-btn{
-  margin: 2px;
-  height: 56px;
-  width: 60px;;
-  background: #fc4a1a !important;  /* fallback for old browsers */
-  background: -webkit-linear-gradient(to left, #ff9d00, #ff7c19) !important;  /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(to left, #ff9d00, #ff7c19) !important; /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-}
-.search-btn img{
-  width: 35px;
-  margin: 10px 12px;
-}
-
 .card-shadow{
   box-shadow: 1px 1px 10px #d0d0d0;
 }
@@ -359,41 +336,41 @@ filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
   color: #6d6d6d;
 }
 
-#sidenav{
+#details #sidenav{
     z-index: 100;
 }
-#sidenav .card{
+#details #sidenav .card{
   width: 300px;
   box-shadow: 1px 1px 10px #4c4c4c;
 }
-#sidenav .card-title{
+#details #sidenav .card-title{
   padding: 8px;
 }
-#sidenav .card-title h5{
+#details #sidenav .card-title h5{
   font-size: 13px;
 }
-#sidenav .card-content{
+#details #sidenav .card-content{
   padding: 10px 10px 10px 10px;
   background-color: white;
 }
-#sidenav .card-content .row{
+#details #sidenav .card-content .row{
   margin-bottom: 10px;
 }
-#sidenav .call span{
+#details #sidenav .call span{
   font-size: 11px;
 }
-#sidenav .call input{
+#details #sidenav .call input{
   border: 1px solid #273d86;
   color: #ff7f25;
 }
-#sidenav .forms input, #sidenav .forms textarea{
+#details #sidenav .forms input, #details #sidenav .forms textarea{
   margin-bottom: 8px;
   font-size: 12px;
 }
-#sidenav .calendar-box{
+#details #sidenav .calendar-box{
   margin: 0 30px;
 }
-#sidenav .calendar-box .item-calendar{
+#details #sidenav .calendar-box .item-calendar{
   width: 47px;
   height:47px;
   margin: 0 4px;
@@ -401,58 +378,58 @@ filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
   background-color: #e2e2e2;
   border: 1px solid #273d86;
 }
-#sidenav .item-calendar .cal-week{
+#details #sidenav .item-calendar .cal-week{
   font-size: 10px;
   width: 45px;
   margin: 0 4px 0 0;
   border-radius: 3px 3px 0 0;
 }
-#sidenav .item-calendar .cal-day{
+#details #sidenav .item-calendar .cal-day{
   font-weight: bold;
   margin: 0px;
 }
-#sidenav .item-calendar .cal-month{
+#details #sidenav .item-calendar .cal-month{
   font-size: 10px;
   margin: 0px;
   margin-top: -3px;
 }
-#sidenav .item-calendar .cal-text{
+#details #sidenav .item-calendar .cal-text{
   margin: 12px 0;
 }
-#sidenav .item-calendar a:hover{
+#details #sidenav .item-calendar a:hover{
   text-decoration: none;
 }
 
-#sidenav .carousel {
+#details #sidenav .carousel {
   margin-bottom: 10px;
 }
 
-#sidenav .carousel .item {
+#details #sidenav .carousel .item {
   height: 30px;
 }
 
-#sidenav .carousel-buttons {
+#details #sidenav .carousel-buttons {
   width: 100%;
   color:#666;
   bottom:1px;
 }
-#sidenav .carousel-buttons > div {
+#details #sidenav .carousel-buttons > div {
   padding:10px;
   border:1px solid #666;
 }
-#sidenav .carousel-buttons a {
+#details #sidenav .carousel-buttons a {
   color:#666;
   display:block;
   line-height:30px;
 }
-#sidenav .progress{
+#details #sidenav .progress{
   margin: 0 30px;
   height: 5px;
 }
-#sidenav .progress-bar-success{
+#details #sidenav .progress-bar-success{
   background-color: #adadad;
 }
-#sidenav .carousel-control.right, .carousel-control.left{
+#details #sidenav .carousel-control.right, .carousel-control.left{
   background: none;
   width: 30px;
   height: 47px;
@@ -462,11 +439,11 @@ filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
   overflow: hidden;
 }
 
-#sidenav .profile-pic .img-container{
+#details #sidenav .profile-pic .img-container{
   width: 40px;
   height: 40px;
 }
-#sidenav .profile-pic .img-container img{
+#details #sidenav .profile-pic .img-container img{
   height: 50px;
 }
 /* slider */

@@ -4,7 +4,7 @@ import './App.css';
 import Nav from './components/Nav';
 import Footer from './components/Footer';
 
-const Listing = require('./routes/ListingDetails/ListingDetails').default;
+const ListingList = require('./routes/ListingList/ListingList').default;
 class Header extends Component {
   render(){
     return(
@@ -18,7 +18,9 @@ class App extends Component {
     return (
       <div id="root">
         <Header />
-        {this.props.children || <Listing />}
+        <div>
+        {this.props.children}
+        </div>
         <Footer />
       </div>
     );

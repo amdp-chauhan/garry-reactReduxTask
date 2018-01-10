@@ -208,7 +208,7 @@ class ListingDetails extends Component {
     );
   }
   componentDidMount() {
-    this.props.dispatch(ListingActions.load());
+    this.props.dispatch(ListingActions.loadById(this.props.params.id));
     var caroTimer = setInterval(function(){caro(startIndex() + 1)}, 10000);
   $('#img-carousel .img-container .img-item').eq(0).addClass('c-img-active');
   caro(startIndex());
@@ -260,7 +260,7 @@ class ListingDetails extends Component {
   }
   render() {
     return (
-      <div>
+      <div id="details">
         {this.renderCarousel()}
         <div className="row">
           <div className="col-sm-12 col-md-9">

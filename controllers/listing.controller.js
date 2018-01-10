@@ -53,6 +53,8 @@ function update_features(req, res, next) {
     .catch(e => next(e));
 }
 
+
+
 /**
  * Get RETS Mls by id
  */
@@ -99,4 +101,25 @@ function get_rets(req, res, next) {
    .catch(e => next(e));
 }
 
-module.exports = {list,show,update_features,get_rets};
+/**
+ * Get RETS Mls by id
+ */
+ function show_rets(req, res, next) {
+   Listing.show(req.params.id)
+    .then(listing => {
+        axios.get(`https://api.simplyrets.com/properties/${listing.mlsId}`, {
+          headers: {
+            Authorization: `Basic ${Buffer.from('nav_4t3434y2:5644q3561335n05t').toString('base64')}`
+          }
+        })
+        .then(response => {
+          response.data.features = listing.features;
+          response.data._id = listing._id;
+          res.json(response.data);
+        })
+        .catch(e => next(e));
+    })
+    .catch(e => next(e));
+ }
+
+module.exports = {list,show,update_features,get_rets,show_rets};
