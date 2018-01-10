@@ -25,18 +25,30 @@ import SupportCenter from './components/SupportCenter';
 import headerImage from '../../assets/jpeg/01.jpg';
 
 class DetailHeader extends Component {
+  renderAddress(){
+    return (
+      <div>
+      {
+        Object.keys(this.props.address).reverse().map(item => {
+          if (this.props.address[item]) {
+            return (
+              <span> {this.props.address[item]}
+              <img src={require("../../assets/svg/circle.svg")} alt="" style={{width:"5px",margin:"0 5px"}} />
+              </span>
+            )
+          }
+        })
+      }
+      </div>
+    );
+  }
   render() {
     return (
         <div className="row">
           <div className="col-sm-12 col-md-8">
-            <span>
-              Ohio
-               <img src={require("../../assets/svg/circle.svg")} alt="" style={{width:"5px",margin:"0 5px"}} />
-              Ohio Country
-               <img src={require("../../assets/svg/circle.svg")} alt="" style={{width:"5px",margin:"0 5px"}} />
-              Ohio
-               <img src={require("../../assets/svg/circle.svg")} alt="" style={{width:"5px",margin:"0 5px"}} />
-              W Spring Str. Arena District</span>
+
+              {this.renderAddress()}
+
           </div>
           <div className="col-sm-12 col-md-4">
             Comment Like Share
@@ -148,6 +160,7 @@ class DetailBody extends Component {
         </div>
         <DetailDescription
           description={this.props.listing.description}
+          geo={this.props.listing.geo}
           />
         <HighlightFeatures
           _id={this.props.listing._id}
@@ -266,7 +279,9 @@ class ListingDetails extends Component {
         <div className="row">
           <div className="col-sm-12 col-md-9">
             <div style={{padding: "0 40px"}}>
-              <DetailHeader />
+              <DetailHeader
+                address={this.props.listing.address}
+                />
 
               <hr className="no-pad hr-dig" />
               <DetailBody
