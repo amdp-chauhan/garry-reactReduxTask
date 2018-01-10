@@ -148,6 +148,7 @@ class DetailBody extends Component {
         </div>
         <DetailDescription
           description={this.props.listing.description}
+          geo={this.props.listing.geo}
           />
         <HighlightFeatures
           _id={this.props.listing._id}

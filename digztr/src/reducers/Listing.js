@@ -17,7 +17,8 @@ const initialState = {
   nearbyHomes: [],
   headerImages: [],
   agents: [],
-  geo: {lat:null,lng:null}
+  geo: {lat:null,lng:null},
+  address: {},
 }
 
 /**
@@ -63,7 +64,8 @@ export default function Listing(state = initialState, action) {
             "firstName": res.agent.firstName,
             "id": res.agent.id
           }],
-          geo: res.geo
+          geo: res.geo,
+          address: res.address
         };
       }
   }

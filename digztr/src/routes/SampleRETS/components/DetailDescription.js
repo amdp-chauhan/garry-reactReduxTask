@@ -1,9 +1,34 @@
 import React, { Component } from 'react';
+import GoogleMapsLoader from 'google-maps';
 import note from '../../../assets/svg/note.svg';
 import envelope from '../../../assets/svg/envelope.svg';
 import printer from '../../../assets/svg/printer.svg';
 
+GoogleMapsLoader.KEY = 'AIzaSyB9oxm8mSzbrjp16Nd343Pr467AcGZWDgU';
+GoogleMapsLoader.LIBRARIES = ['places'];
+
 class DetailDescription extends Component {
+  componentDidUpdate(){
+      if (this.props.geo.lat && this.props.geo.lng) {
+        let geo = this.props.geo;
+        GoogleMapsLoader.load(function(google) {
+          let smallmap = new google.maps.Map(document.getElementById('smallmap'), {
+            center: {lat: geo.lat, lng: geo.lng},
+            zoom: 15,
+            fullscreenControl: false,
+            zoomControl: false,streetViewControl: false,
+          });
+
+          let center = new google.maps.LatLng(geo.lat,geo.lng);
+
+          let marker = new google.maps.Marker({
+            position: center,
+            map: smallmap,
+            title: ""
+          });
+        });
+      }
+    }
   render() {
     return (
       <div id="section-02" className="section">
