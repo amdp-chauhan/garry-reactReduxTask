@@ -84,8 +84,9 @@ class Login extends Component {
                     <button
                       class="btn btn-primary"
                       onClick={() => this.handleFBLogin()}
+                      data-dismiss="modal"
                       >
-                      Sign in with Facebook
+                      Log in with Facebook
                     </button>
                   </div>
                 </div>
