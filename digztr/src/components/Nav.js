@@ -38,9 +38,9 @@ export default class Nav extends Component {
                     <h5 style={{padding:"23px 0",fontSize:"14px"}} className="violet-03-bg">FILTER <img src={require("../assets/svg/down-arrow-white.svg")} alt="" width="12" /></h5>
                   </div>
                 </a>
-                <a href="#">
+                <a data-toggle="modal" data-target="#loginModal">
                   <div className="hidden-xs hidden-sm col-md-2 text-center">
-                    <h5  style={{marginTop:"18px",fontSize:"14px",color:"#555"}}><img src={require("../assets/svg/log-in.svg")} alt="" /> Login/Sign up</h5>
+                    <h5  style={{marginTop:"18px",fontSize:"14px",color:"#555"}}><img src={require("../assets/svg/log-in.svg")} alt="" /> {this.props.user.email===""?'Login/Sign up':this.props.user.first_name}</h5>
                   </div>
                 </a>
                 <a href="#">
