@@ -4,11 +4,13 @@
   "private": true,
   "dependencies": {
     "@google/maps": "^0.4.5",
+    "auth0-js": "^9.0.2",
     "axios": "^0.17.1",
     "bootstrap": "^3.3.7",
     "bootstrap-slider": "^10.0.0",
     "carousel-js": "^4.0.0",
     "chart.js": "^2.7.1",
+    "fb": "^2.0.0",
     "google-maps": "^3.2.1",
     "jquery": "^3.2.1",
     "moment": "^2.20.1",
