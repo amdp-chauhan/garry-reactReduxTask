@@ -7,6 +7,9 @@ GoogleMapsLoader.LIBRARIES = ['places'];
 var markers = [];
 
 export default class NeighborhoodFacilities extends Component {
+  state = {
+    active: "school"
+  }
   componentDidMount() {
 
   }
@@ -78,6 +81,7 @@ export default class NeighborhoodFacilities extends Component {
         });
       });
     });
+    this.setState({active:"school"});
   }
   renderRestaurantMarkers() {
     this.deleteMarkers();
@@ -112,6 +116,7 @@ export default class NeighborhoodFacilities extends Component {
         });
       });
     });
+    this.setState({active:"restaurant"});
   }
   renderMarketMarkers(){
     this.deleteMarkers();
@@ -147,6 +152,7 @@ export default class NeighborhoodFacilities extends Component {
         });
       });
     });
+    this.setState({active:"market"});
   }
   renderHospitalMarkers() {
     this.deleteMarkers();
@@ -181,6 +187,7 @@ export default class NeighborhoodFacilities extends Component {
         });
       });
     });
+    this.setState({active:"hospital"});
   }
   renderGasStationMarkers() {
     this.deleteMarkers();
@@ -215,6 +222,7 @@ export default class NeighborhoodFacilities extends Component {
         });
       });
     });
+    this.setState({active:"gas_station"});
   }
   renderBakeryMarkers() {
     this.deleteMarkers();
@@ -249,6 +257,7 @@ export default class NeighborhoodFacilities extends Component {
         });
       });
     });
+    this.setState({active:"bakery"});
   }
   deleteMarkers(){
     //Loop through all the markers and remove
@@ -269,32 +278,32 @@ export default class NeighborhoodFacilities extends Component {
               <div className="col-xs-5 no-pad white-bg" style={{height:"420px", overflow:"hidden"}}>
               <div className="row no-margin nf-option">
                 <a onClick={() => this.renderSchoolMarkers()}>
-                  <div className="col-xs-12 nf-item nf-active text-center" style={{height:"70px"}}>
+                  <div className={`col-xs-12 nf-item text-center ${this.state.active==="school"?'nf-active':''}`} style={{height:"70px"}}>
                     <img src={require("../../../assets/svg/graduate-hat.svg")} alt="" />
                   </div>
                 </a>
                 <a onClick={() => this.renderRestaurantMarkers()}>
-                  <div className="col-xs-12 nf-item text-center"style={{height:"70px"}}>
+                  <div className={`col-xs-12 nf-item text-center ${this.state.active==="restaurant"?'nf-active':''}`} style={{height:"70px"}}>
                     <img src={require("../../../assets/svg/hat.svg")} alt="" />
                   </div>
                 </a>
                 <a onClick={() => this.renderMarketMarkers()}>
-                  <div className="col-xs-12 nf-item text-center" style={{height:"70px"}}>
+                  <div className={`col-xs-12 nf-item text-center ${this.state.active==="market"?'nf-active':''}`}  style={{height:"70px"}}>
                     <img src={require("../../../assets/svg/empty-shopping-cart.svg")} alt="" />
                   </div>
                 </a>
                 <a onClick={() => this.renderHospitalMarkers()}>
-                  <div className="col-xs-12 nf-item text-center" style={{height:"70px"}}>
+                  <div className={`col-xs-12 nf-item text-center ${this.state.active==="hospital"?'nf-active':''}`}  style={{height:"70px"}}>
                     <img src={require("../../../assets/svg/pills.svg")} alt="" />
                   </div>
                 </a>
                 <a onClick={() => this.renderGasStationMarkers()}>
-                  <div className="col-xs-12 nf-item text-center" style={{height:"70px"}}>
+                  <div className={`col-xs-12 nf-item text-center ${this.state.active==="gas_station"?'nf-active':''}`}  style={{height:"70px"}}>
                     <img src={require("../../../assets/svg/gas-station.svg")} alt="" />
                   </div>
                 </a>
                 <a onClick={() => this.renderBakeryMarkers()}>
-                  <div className="col-xs-12 nf-item text-center" style={{height:"70px"}}>
+                  <div className={`col-xs-12 nf-item text-center ${this.state.active==="bakery"?'nf-active':''}`}  style={{height:"70px"}}>
                     <img src={require("../../../assets/svg/hot-chocolate-cup.svg")} alt="" />
                   </div>
                 </a>
